@@ -1,0 +1,55 @@
+{
+    "name": "jigar-dhulla/swiggy-mcp",
+    "description": "A framework-agnostic PHP client for Swiggy's MCP servers: Food, Instamart, Dineout and Scenes.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["swiggy", "mcp", "model-context-protocol", "instamart", "ai-agent", "oauth", "psr-18"],
+    "authors": [
+        {
+            "name": "Jigar Dhulla",
+            "email": "jigar.tidus@gmail.com",
+            "homepage": "https://github.com/jigar-dhulla"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "php-http/discovery": "^1.19",
+        "psr/http-client": "^1.0",
+        "psr/http-client-implementation": "*",
+        "psr/http-factory": "^1.0",
+        "psr/http-factory-implementation": "*",
+        "psr/http-message": "^1.1 || ^2.0",
+        "psr/log": "^2.0 || ^3.0",
+        "psr/simple-cache": "^2.0 || ^3.0"
+    },
+    "require-dev": {
+        "guzzlehttp/guzzle": "^7.8",
+        "laravel/pint": "^1.18",
+        "pestphp/pest": "^3.0",
+        "phpstan/phpstan": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "JigarDhulla\\SwiggyMcp\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "JigarDhulla\\SwiggyMcp\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "format": "vendor/bin/pint",
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "vendor/bin/pest"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "php-http/discovery": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
